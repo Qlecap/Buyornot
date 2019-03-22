@@ -6,7 +6,7 @@
     android:weightSum="2"> <!-- nombre de colonnes -->
 
     <TextView
-        android:id="@+id/textViewProNom"
+        android:id="@+id/proNom"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Large Text"
@@ -15,7 +15,7 @@
         android:padding="4dp"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    <TextView android:id="@+id/textViewCodNova"
+    <TextView android:id="@+id/codNova"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Large Text"
