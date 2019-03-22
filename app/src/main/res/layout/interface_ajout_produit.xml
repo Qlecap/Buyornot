@@ -37,6 +37,14 @@
         tools:layout_editor_absoluteY="58dp">
 
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true">
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="495dp"
@@ -51,13 +59,28 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Code Barre : " />
+                    android:text="Nom du produit  : " />
+                <EditText
+                    android:id="@+id/nomProd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Code Barre : " />
+                <EditText
                     android:id="@+id/codeBarreProduit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="number" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -67,12 +90,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Marque : "/>
-                <TextView
+                <EditText
                     android:id="@+id/marque"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="text"  />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -82,12 +105,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Quantité (g) : " />
-                <TextView
+                <EditText
                     android:id="@+id/quantite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="number"  />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -98,12 +121,12 @@
                     android:layout_height="wrap_content"
                     android:text="Conditionnement : "/>
 
-                <TextView
+                <EditText
                     android:id="@+id/conditionnement"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="text"  />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -115,12 +138,12 @@
                     android:layout_height="wrap_content"
                     android:text="Catégories : "/>
 
-                <TextView
+                <EditText
                     android:id="@+id/categories"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="text" />
             </LinearLayout>
 
             <LinearLayout
@@ -142,12 +165,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Origine des ingrédients : "/>
-                <TextView
+                <EditText
                     android:id="@+id/origineIngredients"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="text"  />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -157,12 +180,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Pays de vente : "/>
-                <TextView
+                <EditText
                     android:id="@+id/paysDeVente"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="text" />
             </LinearLayout>
 
             <LinearLayout
@@ -186,12 +209,12 @@
                     android:layout_height="wrap_content"
                     android:text="Groupe Nova : " />
 
-                <TextView
+                <EditText
                     android:id="@+id/nova"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="number" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -203,12 +226,12 @@
                     android:layout_height="wrap_content"
                     android:text="Score Nutriscore : " />
 
-                <TextView
+                <EditText
                     android:id="@+id/nutriscore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="text" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -220,12 +243,12 @@
                     android:layout_height="wrap_content"
                     android:text="Ingrédients : " />
 
-                <TextView
+                <EditText
                     android:id="@+id/ingredients"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="text"  />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -237,12 +260,12 @@
                     android:layout_height="wrap_content"
                     android:text="Allergènes : " />
 
-                <TextView
+                <EditText
                     android:id="@+id/allergenes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="text" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -254,12 +277,12 @@
                     android:layout_height="wrap_content"
                     android:text="Additifs : " />
 
-                <TextView
+                <EditText
                     android:id="@+id/additifs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="text" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -295,12 +318,12 @@
                     android:layout_height="wrap_content"
                     android:text="Energie (kJ ( kCal)) : "/>
 
-                <TextView
+                <EditText
                     android:id="@+id/energie"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="number" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -312,12 +335,12 @@
                     android:layout_height="wrap_content"
                     android:text="Matières Grasses / Lipides  (g) : "/>
 
-                <TextView
+                <EditText
                     android:id="@+id/matGrass"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="number" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -329,12 +352,12 @@
                     android:layout_height="wrap_content"
                     android:text="Acides gras saturés (g) : "/>
 
-                <TextView
+                <EditText
                     android:id="@+id/acidesGrasStatures"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="number" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -346,12 +369,12 @@
                     android:layout_height="wrap_content"
                     android:text="Glucides (g) : "/>
 
-                <TextView
+                <EditText
                     android:id="@+id/glucides"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="number" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -363,12 +386,12 @@
                     android:layout_height="wrap_content"
                     android:text="Sucres (g) : "/>
 
-                <TextView
+                <EditText
                     android:id="@+id/sucres"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="number" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -380,12 +403,12 @@
                     android:layout_height="wrap_content"
                     android:text="Fibres alimentaires (g) : "/>
 
-                <TextView
+                <EditText
                     android:id="@+id/fibres"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="number" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -397,12 +420,12 @@
                     android:layout_height="wrap_content"
                     android:text="Protéines (g) : "/>
 
-                <TextView
+                <EditText
                     android:id="@+id/proteines"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="number" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -414,14 +437,16 @@
                     android:layout_height="wrap_content"
                     android:text="Sodium (g) : "/>
 
-                <TextView
+                <EditText
                     android:id="@+id/sodium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:inputType="number" />
             </LinearLayout>
         </LinearLayout>
+
+        </ScrollView>
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
