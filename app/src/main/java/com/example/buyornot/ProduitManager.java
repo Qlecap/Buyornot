@@ -129,9 +129,8 @@ public class ProduitManager {
             c.close();
         }
         return a;
-
-
     }
+
     public Cursor getLesProduits() {
         // sélection de tous les enregistrements de la table
         return db.rawQuery("SELECT * FROM "+TABLE_NAME, null);
