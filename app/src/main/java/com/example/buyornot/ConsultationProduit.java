@@ -15,6 +15,7 @@ public class ConsultationProduit extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.interface_consultation_produit);
         int id = 1;
+        /*
         Produit unProduit = getProduit(id);
         TextView libelleProduit = (TextView) findViewById(R.id.libelleProduit);
         libelleProduit.setText(unProduit.getLibelle());
@@ -78,7 +79,7 @@ public class ConsultationProduit extends AppCompatActivity {
 
         TextView tauxFruitsLegum = (TextView) findViewById(R.id.tauxFruitsLegum);
         tauxFruitsLegum.setText(unProduit.getFruitsLegumes());
-
+        */
 
     }
 
