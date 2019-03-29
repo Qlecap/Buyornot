@@ -3,7 +3,7 @@ package com.example.buyornot;
 public class Produit {
     private int id;
     private String libelle;
-    private int codeBarre;
+    private long codeBarre;
     private int quantite;
     private String ingredients;
     private int energie;
@@ -19,7 +19,8 @@ public class Produit {
     public Produit() {
     }
 
-    public Produit(int id, String libelle, int codeBarre, int quantite, String ingredients, int energie, int matiereGrasse, int acidesGras, int glucides, int sucres, int proteine, int sel, int sodium, int nutriscore) {
+    public Produit(int id, String libelle, long codeBarre, int quantite, String ingredients, int energie, int matiereGrasse, int acidesGras,
+                   int glucides, int sucres, int proteine, int sel, int sodium, int nutriscore) {
         this.id = id;
         this.libelle = libelle;
         this.codeBarre = codeBarre;
@@ -52,11 +53,11 @@ public class Produit {
         this.libelle = libelle;
     }
 
-    public int getCodeBarre() {
+    public long getCodeBarre() {
         return codeBarre;
     }
 
-    public void setCodeBarre(int codeBarre) {
+    public void setCodeBarre(long codeBarre) {
         this.codeBarre = codeBarre;
     }
 
