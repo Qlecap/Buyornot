@@ -15,12 +15,13 @@ public class Produit {
     private int sel;
     private int sodium;
     private int nutriscore;
+    private int fruitsLegumes;
 
     public Produit() {
     }
 
     public Produit(int id, String libelle, long codeBarre, int quantite, String ingredients, int energie, int matiereGrasse, int acidesGras,
-                   int glucides, int sucres, int proteine, int sel, int sodium, int nutriscore) {
+                   int glucides, int sucres, int proteine, int sel, int sodium, int nutriscore, int fruitsLegumes) {
         this.id = id;
         this.libelle = libelle;
         this.codeBarre = codeBarre;
@@ -35,6 +36,7 @@ public class Produit {
         this.sel = sel;
         this.sodium = sodium;
         this.nutriscore = nutriscore;
+        this.fruitsLegumes = fruitsLegumes;
     }
 
     public int getId() {
@@ -148,4 +150,10 @@ public class Produit {
     public void setNutriscore(int nutriscore) {
         this.nutriscore = nutriscore;
     }
+
+    public int getFruitsLegumes() {
+        return fruitsLegumes;
+    }
+
+    public void setFruitsLegumes(int fruitsLegumes) { this.fruitsLegumes = fruitsLegumes; }
 }
