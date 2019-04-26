@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         Produit unProduit = new Produit(1, "Huile", 3336590083787L, 100, "olive", 10, 10, 10, 10, 10, 10, 10, 10, 11,10);
 
 
@@ -25,17 +24,15 @@ public class MainActivity extends AppCompatActivity {
         produitmanager.addProduit(unProduit);
         produitmanager.addProduit(unProduit2);
 
-        //Produit test =  produitManager.getProduit(1);
-
-        //Toast.makeText(getApplicationContext(), test.getLibelle(), Toast.LENGTH_LONG).show();
+        Produit test =  produitmanager.getProduit(1);
 
         produitmanager.close();
+
+        //Toast.makeText(getApplicationContext(), test.getLibelle(), Toast.LENGTH_LONG).show();
     }
 
     public void ChangeActivity(View view){
         Intent intent = new Intent(this, ListerProduit.class);
-        Bundle bundle = new Bundle();
-        intent.putExtras(bundle);
         startActivity(intent);
     }
 

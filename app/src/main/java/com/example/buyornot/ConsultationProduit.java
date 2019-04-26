@@ -14,29 +14,40 @@ public class ConsultationProduit extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.interface_consultation_produit);
-        int id = 1;
-        /*
-        Produit unProduit = getProduit(id);
+        Intent intent = getIntent();
+
+        // vérifie qu'une valeur est associée à la clé “id”
+        int id = intent.getIntExtra("id",-1);
+
+        // nouveau produit
+        Produit unProduit = new Produit();
+        //preparation de la connexion a la base
+        ProduitManager produitmanager = new ProduitManager(this);
+
+        produitmanager.open();
+        unProduit = produitmanager.getProduit(id);
+        produitmanager.close();
+
         TextView libelleProduit = (TextView) findViewById(R.id.libelleProduit);
         libelleProduit.setText(unProduit.getLibelle());
 
         TextView codeBarreProduit = (TextView) findViewById(R.id.codeBarreProduit);
         long codeB = unProduit.getCodeBarre();
         codeBarreProduit.setText(Long.toString(codeB));
-
+        /*
         TextView marque = (TextView) findViewById(R.id.marque);
         marque.setText(unProduit.getMarque().getProduit());
-
+*/
         TextView quantite = (TextView) findViewById(R.id.quantite);
-        quantite.setText(unProduit.getQuantite());
-
+        quantite.setText(Integer.toString(unProduit.getQuantite()));
+/*
         TextView conditionnement = (TextView) findViewById(R.id.conditionnement);
         conditionnement.setText(unProduit.getConditionnement().getLibelle());
 
         TextView categories = (TextView) findViewById(R.id.categories);
         Categorie lesCategories = unProduit.getCategories();
         String libCategories = "";
-        //
+
         //boucle pour concatener les libelles des categories en une variable
         categories.setText(libCategories);
 
@@ -50,42 +61,43 @@ public class ConsultationProduit extends AppCompatActivity {
         TextView paysDeVente = (TextView) findViewById(R.id.paysDeVente);
         ArrayList<Pays> lesPaysVente = unProduit.getPaysVente();
         String libPaysVente = "";
-        //
+
         //boucle pour concatener les libelles des pays d'origine en une variable
         paysDeVente.setText(libPaysVente);
 
         TextView nova = (TextView) findViewById(R.id.nova);
         nova.setText(unProduit.getNova().getLibelle);
-
+*/
         TextView nutriscore = (TextView) findViewById(R.id.nutriscore);
-        nutriscore.setText(unProduit.getNutriscore());
+        nutriscore.setText(Integer.toString(unProduit.getNutriscore()));
 
         TextView ingredients = (TextView) findViewById(R.id.ingredients);
         ingredients.setText(unProduit.getIngredients());
-
+/*
         TextView allergenes = (TextView) findViewById(R.id.allergenes);
         ArrayList<Allegene> lesAllergenes = unProduit.getAllergenes();
         String libAllergenes = "";
-        //
+
         //boucle pour concatener les libelles des pays d'origine en une variable
         allergenes.setText(libAllergenes);
 
         TextView additifs = (TextView) findViewById(R.id.additifs);
         ArrayList<Additif> lesAdditifs = unProduit.getAdditifs();
         String libAdditifs = "";
-        //
+
         //boucle pour concatener les libelles des pays d'origine en une variable
         additifs.setText(libAdditifs);
-
+*/
         TextView tauxFruitsLegum = (TextView) findViewById(R.id.tauxFruitsLegum);
-        tauxFruitsLegum.setText(unProduit.getFruitsLegumes());
-        */
+        tauxFruitsLegum.setText(Integer.toString(unProduit.getFruitsLegumes()));
+
+
 
     }
 
     //j'ai mis en commentaire pour eviter des problemes de compilation le temps que l'on fasse un merge
-    public void ChangeActivity(View view) {
-        //Intent intent = new Intent(this, ListeProduit.class);
-        //startActivity(intent);
+    public void RetourLister(View view) {
+        Intent intent = new Intent(this, ListerProduit.class);
+        startActivity(intent);
     }
 }
