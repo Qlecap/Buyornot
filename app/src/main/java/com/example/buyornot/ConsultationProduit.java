@@ -116,10 +116,7 @@ public class ConsultationProduit extends AppCompatActivity {
 
         TextView sodium = (TextView) findViewById(R.id.sodium);
         sodium.setText(Integer.toString(unProduit.getSodium()));
-
-        TextView sucres = (TextView) findViewById(R.id.sucres);
-        sucres.setText(Integer.toString(unProduit.getSucres()));
-
+        
     }
 
     public void RetourLister(View view) {
