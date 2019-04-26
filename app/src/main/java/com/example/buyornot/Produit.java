@@ -22,7 +22,7 @@ public class Produit {
     private ArrayList<Additif> lesAdditifs;
     private ArrayList<Allegene> lesAllergenes;
     private ArrayList<Categorie> lesCategories;
-    private CodeEmballage leCodeEmballage;
+    private ArrayList<CodeEmballage> lesCodesEmballage;
     private ArrayList<Conditionnement> lesConditionnements;
     private ArrayList<Label> lesLabels;
     private ArrayList<Lien> lesLiens;
@@ -233,9 +233,9 @@ public class Produit {
         lesCategories.add(uneCategorie);
     }
 
-    public CodeEmballage getLeCodeEmballage() { return leCodeEmballage; }
+    public ArrayList<CodeEmballage> getLesCodesEmballage() { return lesCodesEmballage; }
 
-    public void setLeCodeEmballage(CodeEmballage leCodeEmballage) { this.leCodeEmballage = leCodeEmballage; }
+    public void setLesCodesEmballage(ArrayList<CodeEmballage> lesCodesEmballage) { this.lesCodesEmballage = lesCodesEmballage; }
 
     public ArrayList<Conditionnement> getLesConditionnements() { return lesConditionnements; }
 
