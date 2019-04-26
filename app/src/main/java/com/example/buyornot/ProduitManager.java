@@ -112,7 +112,7 @@ public class ProduitManager {
         return db.delete(TABLE_NAME, where, whereArgs);
     }
     public Produit getProduit(int id) {
-        // Retourne l'animal dont l'id est passé en paramètre
+        // Retourne le produit dont l'id est passé en paramètre
         Produit a=new Produit();
         Cursor c = db.rawQuery("SELECT * FROM "+TABLE_NAME + " where pro_id = " + id , null);
         if (c.moveToFirst()) {
