@@ -8,7 +8,7 @@ import com.example.buyornot.ProduitManager;
 
 public class MySQLite extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "buyornot.sqlite";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static MySQLite sInstance;
 
     public static synchronized MySQLite getInstance(Context context) {

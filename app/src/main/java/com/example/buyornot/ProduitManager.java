@@ -37,7 +37,7 @@ public class ProduitManager {
         " "+KEY_PROTEINE_PRODUIT+" INT," +
         " "+KEY_SEL_PRODUIT+" INT," +
         " "+KEY_SODIUM_PRODUIT+" INT," +
-        " "+KEY_NUTRISCORE_PRODUIT+" INT" +
+        " "+KEY_NUTRISCORE_PRODUIT+" INT," +
         " "+KEY_FRUITLEGUMES_PRODUIT+" INT" +
         " );";
     private MySQLite maBaseSQLite; // notre gestionnaire du fichier SQLite
