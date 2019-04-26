@@ -13,21 +13,34 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         Produit unProduit = new Produit(1, "Huile", 3336590083787L, 100, "olive", 10, 10, 10, 10, 10, 10, 10, 10, 11,10);
 
-
-        Produit unProduit2 = new Produit(2, "Pâte", 3336592223787L, 100, "blé", 10, 10, 10, 10, 10, 10, 10, 10, 11,10);
-
+        Produit unProduit2 = new Produit(2, "Pâte", 3336592223787L, 100, "blé, oeufs", 10, 10, 10, 10, 10, 10, 10, 10, 11,10);
 
         ProduitManager produitmanager = new ProduitManager(this);
         produitmanager.open();
-        produitmanager.addProduit(unProduit);
-        produitmanager.addProduit(unProduit2);
 
-        //Produit test =  produitManager.getProduit(1);
+        //produitmanager.supProduit(unProduit);
+        //produitmanager.supProduit(unProduit2);
+        //produitmanager.addProduit(unProduit);
+        //produitmanager.addProduit(unProduit2);
+
+        //Produit test = produitmanager.getProduit(1);
 
         //Toast.makeText(getApplicationContext(), test.getLibelle(), Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), String.valueOf(test.getCodeBarre()), Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), Integer.toString(test.getQuantite()), Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), test.getIngredients(), Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), String.valueOf(test.getEnergie()), Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), String.valueOf(test.getMatiereGrasse()), Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), String.valueOf(test.getAcidesGras()), Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), String.valueOf(test.getGlucides()), Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), String.valueOf(test.getSucres()), Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), String.valueOf(test.getProteine()), Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), String.valueOf(test.getSel()), Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), String.valueOf(test.getSodium()), Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), String.valueOf(test.getNutriscore()), Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), String.valueOf(test.getFruitsLegumes()), Toast.LENGTH_LONG).show();
 
         produitmanager.close();
     }

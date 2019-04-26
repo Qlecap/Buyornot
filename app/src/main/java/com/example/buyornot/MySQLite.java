@@ -23,7 +23,7 @@ public class MySQLite extends SQLiteOpenHelper {
         // Création de la base de données
         // on exécute ici les requêtes de création des tables
         sqLiteDatabase.execSQL(ProduitManager.CREATE_TABLE_PRODUIT);
-        // création table "animal"
+        // création table "produit"
     }
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i2) {
