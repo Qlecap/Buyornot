@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         ProduitManager produitmanager = new ProduitManager(this);
         produitmanager.open();
 
+
         //produitmanager.supProduit(unProduit);
         //produitmanager.supProduit(unProduit2);
         //produitmanager.addProduit(unProduit);
@@ -43,12 +44,12 @@ public class MainActivity extends AppCompatActivity {
         //Toast.makeText(getApplicationContext(), String.valueOf(test.getFruitsLegumes()), Toast.LENGTH_LONG).show();
 
         produitmanager.close();
+
+        //Toast.makeText(getApplicationContext(), test.getLibelle(), Toast.LENGTH_LONG).show();
     }
 
     public void ChangeActivity(View view){
         Intent intent = new Intent(this, ListerProduit.class);
-        Bundle bundle = new Bundle();
-        intent.putExtras(bundle);
         startActivity(intent);
     }
 
