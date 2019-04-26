@@ -3,9 +3,13 @@ package com.example.buyornot;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import java.util.ArrayList;
+
 public class Pays {
     private int id;
     private String libelle;
+    private ArrayList<Produit> lesProduitsOriginaires;
+    private ArrayList<Produit> lesProduitsVendus;
 
     public Pays(){}
     public Pays(int id, String libelle) {
@@ -27,5 +31,27 @@ public class Pays {
 
     public void setLibelle(String libelle) {
         this.libelle = libelle;
+    }
+
+    public ArrayList<Produit> getLesProduitsOriginaires() { return lesProduitsOriginaires; }
+
+    public void setLesProduitsOriginaires(ArrayList<Produit> lesProduitsOriginaires) { this.lesProduitsOriginaires = lesProduitsOriginaires; }
+
+    public void addUnProduitOriginaire (Produit unProduit) {
+        if (lesProduitsOriginaires == null){
+            lesProduitsOriginaires = new ArrayList<Produit>();
+        }
+        lesProduitsOriginaires.add(unProduit);
+    }
+
+    public ArrayList<Produit> getLesProduitsVendus() { return lesProduitsVendus; }
+
+    public void setLesProduitsVendus(ArrayList<Produit> lesProduitsVendus) { this.lesProduitsVendus = lesProduitsVendus; }
+
+    public void addUnProduitVendu (Produit unProduit) {
+        if (lesProduitsVendus == null){
+            lesProduitsVendus = new ArrayList<Produit>();
+        }
+        lesProduitsVendus.add(unProduit);
     }
 }

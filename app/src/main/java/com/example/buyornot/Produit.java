@@ -1,5 +1,7 @@
 package com.example.buyornot;
 
+import java.util.ArrayList;
+
 public class Produit {
     private int id;
     private String libelle;
@@ -17,6 +19,20 @@ public class Produit {
     private int nutriscore;
     private int fruitsLegumes;
     private int fibresAlimentaires;
+    private ArrayList<Additif> lesAdditifs;
+    private ArrayList<Allegene> lesAllergenes;
+    private ArrayList<Categorie> lesCategories;
+    private CodeEmballage leCodeEmballage;
+    private ArrayList<Conditionnement> lesConditionnements;
+    private ArrayList<Label> lesLabels;
+    private ArrayList<Lien> lesLiens;
+    private ArrayList<LieuxDeFabrication> lesLieuxDeFabrications;
+    private ArrayList<Magasin> lesMagasins;
+    private Marque laMarque;
+    private Nova leNova;
+    private Nutriscore leNutriscore;
+    private ArrayList<Pays> lesPaysDOrigine;
+    private ArrayList<Pays> lesPaysDeVente;
 
     public Produit() {
     }
@@ -183,4 +199,130 @@ public class Produit {
     }
 
     public void setFibresAlimentaires(int fibresAlimentaires) { this.fibresAlimentaires = fibresAlimentaires; }
+
+    public ArrayList<Additif> getLesAdditifs() { return lesAdditifs; }
+
+    public void setLesAdditifs(ArrayList<Additif> lesAdditifs) { this.lesAdditifs = lesAdditifs; }
+
+    public void addUnAdditif (Additif unAdditif) {
+        if (lesAdditifs == null){
+            lesAdditifs = new ArrayList<Additif>();
+        }
+        lesAdditifs.add(unAdditif);
+    }
+
+    public ArrayList<Allegene> getLesAllergenes() { return lesAllergenes; }
+
+    public void setLesAllergenes(ArrayList<Allegene> lesAllergenes) { this.lesAllergenes = lesAllergenes; }
+
+    public void addUnAllergene (Allegene unAllergene) {
+        if (lesAllergenes == null){
+            lesAllergenes = new ArrayList<Allegene>();
+        }
+        lesAllergenes.add(unAllergene);
+    }
+
+    public ArrayList<Categorie> getLesCategories() { return lesCategories; }
+
+    public void setLesCategories(ArrayList<Categorie> lesCategories) { this.lesCategories = lesCategories; }
+
+    public void addUneCategorie (Categorie uneCategorie) {
+        if (lesCategories == null){
+            lesCategories = new ArrayList<Categorie>();
+        }
+        lesCategories.add(uneCategorie);
+    }
+
+    public CodeEmballage getLeCodeEmballage() { return leCodeEmballage; }
+
+    public void setLeCodeEmballage(CodeEmballage leCodeEmballage) { this.leCodeEmballage = leCodeEmballage; }
+
+    public ArrayList<Conditionnement> getLesConditionnements() { return lesConditionnements; }
+
+    public void setLesConditionnements(ArrayList<Conditionnement> lesConditionnements) { this.lesConditionnements = lesConditionnements; }
+
+    public void addUnConditionnement (Conditionnement unConditionnement) {
+        if (lesConditionnements == null){
+            lesConditionnements = new ArrayList<Conditionnement>();
+        }
+        lesConditionnements.add(unConditionnement);
+    }
+
+    public ArrayList<Label> getLesLabels() { return lesLabels; }
+
+    public void setLesLabels(ArrayList<Label> lesLabels) { this.lesLabels = lesLabels; }
+
+    public void addUnLabel (Label unLabel) {
+        if (lesLabels == null){
+            lesLabels = new ArrayList<Label>();
+        }
+        lesLabels.add(unLabel);
+    }
+
+    public ArrayList<Lien> getLesLiens() { return lesLiens; }
+
+    public void setLesLiens(ArrayList<Lien> lesLiens) { this.lesLiens = lesLiens; }
+
+    public void addUnLien (Lien unLien) {
+        if (lesLiens == null){
+            lesLiens = new ArrayList<Lien>();
+        }
+        lesLiens.add(unLien);
+    }
+
+    public ArrayList<LieuxDeFabrication> getLesLieuxDeFabrications() { return lesLieuxDeFabrications; }
+
+    public void setLesLieuxDeFabrications(ArrayList<LieuxDeFabrication> lesLieuxDeFabrications) { this.lesLieuxDeFabrications = lesLieuxDeFabrications; }
+
+    public void addUnLieuDeFabrication (LieuxDeFabrication unLieuDeFabrication) {
+        if (lesLieuxDeFabrications == null){
+            lesLieuxDeFabrications = new ArrayList<LieuxDeFabrication>();
+        }
+        lesLieuxDeFabrications.add(unLieuDeFabrication);
+    }
+
+    public ArrayList<Magasin> getLesMagasins() { return lesMagasins; }
+
+    public void setLesMagasins(ArrayList<Magasin> lesMagasins) { this.lesMagasins = lesMagasins; }
+
+    public void addUnMagasin (Magasin unMagasin) {
+        if (lesMagasins == null){
+            lesMagasins = new ArrayList<Magasin>();
+        }
+        lesMagasins.add(unMagasin);
+    }
+
+    public Marque getLaMarque() { return laMarque; }
+
+    public void setLaMarque(Marque laMarque) { this.laMarque = laMarque; }
+
+    public Nova getLeNova() { return leNova; }
+
+    public void setLeNova(Nova leNova) { this.leNova = leNova; }
+
+    public Nutriscore getLeNutriscore() { return leNutriscore; }
+
+    public void setLeNutriscore(Nutriscore leNutriscore) { this.leNutriscore = leNutriscore; }
+
+    public ArrayList<Pays> getLesPaysDOrigine() { return lesPaysDOrigine; }
+
+    public void setLesPaysDOrigine(ArrayList<Pays> lesPaysDOrigine) { this.lesPaysDOrigine = lesPaysDOrigine; }
+
+    public void addUnPays (Pays unPaysDOrigine) {
+        if (lesPaysDOrigine == null){
+            lesPaysDOrigine = new ArrayList<Pays>();
+        }
+        lesPaysDOrigine.add(unPaysDOrigine);
+    }
+
+    public ArrayList<Pays> getLesPaysDeVente() { return lesPaysDeVente; }
+
+    public void setLesPaysDeVente(ArrayList<Pays> lesPaysDeVente) { this.lesPaysDeVente = lesPaysDeVente; }
+
+    public void addUnPaysDeVente (Pays unPaysDeVente) {
+        if (lesPaysDeVente == null){
+            lesPaysDeVente = new ArrayList<Pays>();
+        }
+        lesPaysDeVente.add(unPaysDeVente);
+    }
 }

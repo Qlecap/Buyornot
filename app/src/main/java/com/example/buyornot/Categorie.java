@@ -1,8 +1,11 @@
 package com.example.buyornot;
 
+import java.util.ArrayList;
+
 public class Categorie {
     private int id;
     private String libelle;
+    private ArrayList<Produit> lesProduits;
 
     public Categorie() {
     }
@@ -26,5 +29,16 @@ public class Categorie {
 
     public void setLibelle(String libelle) {
         this.libelle = libelle;
+    }
+
+    public ArrayList<Produit> getLesProduits() { return lesProduits; }
+
+    public void setLesProduits(ArrayList<Produit> lesProduits) { this.lesProduits = lesProduits; }
+
+    public void addUnProduit (Produit unProduit) {
+        if (lesProduits == null){
+            lesProduits = new ArrayList<Produit>();
+        }
+        lesProduits.add(unProduit);
     }
 }
