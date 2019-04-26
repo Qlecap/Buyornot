@@ -21,6 +21,25 @@ public class Produit {
     public Produit() {
     }
 
+    public Produit(String libelle, long codeBarre, int quantite, String ingredients, int energie, int matiereGrasse, int acidesGras,
+                   int glucides, int sucres, int proteine, int sel, int sodium, int nutriscore, int fruitsLegumes, int fibresAlimentaires) {
+        this.libelle = libelle;
+        this.codeBarre = codeBarre;
+        this.quantite = quantite;
+        this.ingredients = ingredients;
+        this.energie = energie;
+        this.matiereGrasse = matiereGrasse;
+        this.acidesGras = acidesGras;
+        this.glucides = glucides;
+        this.sucres = sucres;
+        this.proteine = proteine;
+        this.sel = sel;
+        this.sodium = sodium;
+        this.nutriscore = nutriscore;
+        this.fruitsLegumes = fruitsLegumes;
+        this.fibresAlimentaires = fibresAlimentaires;
+    }
+
     public Produit(int id, String libelle, long codeBarre, int quantite, String ingredients, int energie, int matiereGrasse, int acidesGras,
                    int glucides, int sucres, int proteine, int sel, int sodium, int nutriscore, int fruitsLegumes, int fibresAlimentaires) {
         this.id = id;

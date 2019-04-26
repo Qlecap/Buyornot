@@ -13,17 +13,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Produit unProduit = new Produit(1, "Huile", 3336590083787L, 100, "olive", 10, 10, 10, 10, 10, 10, 10, 10, 11,10, 10);
+        //Produit unProduit = new Produit("Fromage", 3336590083787L, 100, "lait", 10, 10, 10, 10, 10, 10, 10, 10, 11,10, 10);
 
-        Produit unProduit2 = new Produit(2, "Pâte", 3336592223787L, 100, "blé, oeufs", 10, 10, 10, 10, 10, 10, 10, 10, 11,10, 10);
+        //Produit unProduit2 = new Produit("Riz", 3336592223787L, 100, "Riz", 10, 10, 10, 10, 10, 10, 10, 10, 11,10, 10);
 
         ProduitManager produitmanager = new ProduitManager(this);
         produitmanager.open();
 
-        //produitmanager.supProduit(unProduit);
-        //produitmanager.supProduit(unProduit2);
-        produitmanager.addProduit(unProduit);
-        produitmanager.addProduit(unProduit2);
+        //produitmanager.addProduit(unProduit);
+        //produitmanager.addProduit(unProduit2);
 
         //Produit test = produitmanager.getProduit(1);
 
