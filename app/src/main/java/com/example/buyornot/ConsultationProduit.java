@@ -91,11 +91,37 @@ public class ConsultationProduit extends AppCompatActivity {
         TextView tauxFruitsLegum = (TextView) findViewById(R.id.tauxFruitsLegum);
         tauxFruitsLegum.setText(Integer.toString(unProduit.getFruitsLegumes()));
 
+        //Reperes nutritionnels
 
+        TextView energie = (TextView) findViewById(R.id.energie);
+        energie.setText(Integer.toString(unProduit.getEnergie()));
+
+        TextView matatiereGrass = (TextView) findViewById(R.id.matGrass);
+        matatiereGrass.setText(Integer.toString(unProduit.getMatiereGrasse()));
+
+        TextView acidesGrasStatures = (TextView) findViewById(R.id.acidesGrasStatures);
+        acidesGrasStatures.setText(Integer.toString(unProduit.getAcidesGras()));
+
+        TextView glucides = (TextView) findViewById(R.id.glucides);
+        glucides.setText(Integer.toString(unProduit.getGlucides()));
+
+        TextView sucres = (TextView) findViewById(R.id.sucres);
+        sucres.setText(Integer.toString(unProduit.getSucres()));
+
+        TextView fibres = (TextView) findViewById(R.id.fibres);
+        fibres.setText(Integer.toString(unProduit.getFibresAlimentaires()));
+
+        TextView proteines = (TextView) findViewById(R.id.proteines);
+        proteines.setText(Integer.toString(unProduit.getProteine()));
+
+        TextView sodium = (TextView) findViewById(R.id.sodium);
+        sodium.setText(Integer.toString(unProduit.getSodium()));
+
+        TextView sucres = (TextView) findViewById(R.id.sucres);
+        sucres.setText(Integer.toString(unProduit.getSucres()));
 
     }
 
-    //j'ai mis en commentaire pour eviter des problemes de compilation le temps que l'on fasse un merge
     public void RetourLister(View view) {
         Intent intent = new Intent(this, ListerProduit.class);
         startActivity(intent);

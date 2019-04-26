@@ -22,6 +22,7 @@ public class ProduitManager {
     public static final String KEY_SODIUM_PRODUIT="pro_sodium";
     public static final String KEY_NUTRISCORE_PRODUIT="pro_nutriscore";
     public static final String KEY_FRUITLEGUMES_PRODUIT="pro_fruitLegumes";
+    public static final String KEY_FIBRES_PRODUIT="pro_fibres";
 
     public static final String CREATE_TABLE_PRODUIT = "CREATE TABLE "+TABLE_NAME+
         " ( "+KEY_ID_PRODUIT+" INTEGER primary key AUTOINCREMENT," +
@@ -39,6 +40,7 @@ public class ProduitManager {
         " "+KEY_SODIUM_PRODUIT+" INT," +
         " "+KEY_NUTRISCORE_PRODUIT+" INT," +
         " "+KEY_FRUITLEGUMES_PRODUIT+" INT" +
+        " "+KEY_FIBRES_PRODUIT+" INT" +
         " );";
     private MySQLite maBaseSQLite; // notre gestionnaire du fichier SQLite
     private SQLiteDatabase db;
@@ -75,6 +77,7 @@ public class ProduitManager {
         values.put(KEY_SODIUM_PRODUIT,produit.getSodium());
         values.put(KEY_NUTRISCORE_PRODUIT,produit.getNutriscore());
         values.put(KEY_FRUITLEGUMES_PRODUIT,produit.getFruitsLegumes());
+        values.put(KEY_FIBRES_PRODUIT,produit.getFibresAlimentaires());
 
         // insert() retourne l'id du nouvel enregistrement inséré, ou -1 en cas d'erreur
         return db.insert(TABLE_NAME,null,values);
@@ -99,6 +102,7 @@ public class ProduitManager {
         values.put(KEY_SODIUM_PRODUIT,produit.getSodium());
         values.put(KEY_NUTRISCORE_PRODUIT,produit.getNutriscore());
         values.put(KEY_FRUITLEGUMES_PRODUIT,produit.getFruitsLegumes());
+        values.put(KEY_FIBRES_PRODUIT,produit.getFibresAlimentaires());
 
         String where = KEY_ID_PRODUIT+" = ?";
         String[] whereArgs = {produit.getId()+""};
@@ -131,6 +135,7 @@ public class ProduitManager {
             a.setSodium(c.getInt(c.getColumnIndex(KEY_SODIUM_PRODUIT)));
             a.setNutriscore(c.getInt(c.getColumnIndex(KEY_NUTRISCORE_PRODUIT)));
             a.setFruitsLegumes(c.getInt(c.getColumnIndex(KEY_FRUITLEGUMES_PRODUIT)));
+            a.setFibresAlimentaires(c.getInt(c.getColumnIndex(KEY_FIBRES_PRODUIT)));
             c.close();
         }
         return a;
